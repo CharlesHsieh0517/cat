@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+   <style type="text/css">
+      * {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .wrap {
+         width: 100%;
+         display: flex;
+      }
+
+
+      .item {
+         width: 25%;
+         position: relative;
+      }
+
+      .item img {
+         width: 100%;
+         vertical-align: middle;
+      }
+
+      .item .txt {
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         padding: 20px;
+         background-color: rgba(0, 0, 0, 0.6);
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         opacity: 0;
+         transition: opacity 0.5s;
+      }
+
+      .item:hover .txt{
+         opacity: 1;
+      }
+
+      .item h2 {
+         font-size: 40px;
+         color: #F4A460;
+         font-weight: 500;
+         /* text-align: center; */
+      }
+
+      .item h2::after{
+         content: "";
+         display: block;
+         width: 0%;
+         height: 2px;
+         margin: 10px 0;
+         background-color: #F4A460;
+         transition: width 0.5s 0.5s;
+      }
+
+      .item:hover h2::after{
+         width: 100%;
+      }
+
+      .item p {
+         font-size: 20px;
+         color: white;
+         font-weight: 100;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrap">
+      <div class="item">
+         <img src="./FMLAB.PHOTO/dog/首頁圖片1.jpg">
+         <div class="txt">
+            <h2>住宿</h2>
+            <p>
+               住宿前建議預約帶狗來參觀，透過約20分鐘的基礎觀察大致上能了解狗狗住宿的適應狀況。提前準備能幫助狗狗擁有較良好的住宿經驗。
+               不一定需要安親才能住宿。
+               如需參觀請提前一日預約，不開放當日與連假預約參觀預約參觀時段為平日PM14:00-16:00及PM19:00-20:00
+            </p>
+         </div>
+      </div>
+      <div class="item">
+         <img src="./FMLAB.PHOTO/dog/首頁圖片2.jpg">
+         <div class="txt">
+            <h2>安親</h2>
+            <p>
+               以小時計費，安親最低4小時起，不足4小時以4小時計費。
+
+               連假期間不提供安親服務。
+
+               長期安親照護請預約時間帶狗狗來店洽詢。
+            </p>
+         </div>
+      </div>
+      <div class="item">
+         <img src="./FMLAB.PHOTO/dog/首頁圖片3.jpg">
+         <div class="txt">
+            <h2>美容</h2>
+            <p>
+               預約制。由專業美容師提供洗澡跟修剪服務。
+
+               ​​免費折抵當日4小時安親服務。
+
+               每週二、週三美容室休息。
+
+               使用日本頂級醫美沙龍洗沐品牌艾芙樂AfloatDog，溫和不刺激、保濕鎖水，從根本呵護狗狗的肌膚毛髮。
+            </p>
+         </div>
+      </div>
+      <div class="item">
+         <img src="./FMLAB.PHOTO/dog/首頁圖片4.jpg">
+         <div class="txt">
+            <h2>櫃台/住宿區分離</h2>
+            <p>
+               避免狗兒聽到電話鈴聲群起吠叫。第一次來黑鼻子的狗狗也可以避開與陌生狗兒互動的壓力，到新環境的良好經驗對牠們來說很重要。
+            </p>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

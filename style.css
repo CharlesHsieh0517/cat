@@ -1,74 +1,118 @@
-/*
-inspired from https://codepen.io/Rowno/pen/Afykb 
-*/
-.carousel-fade .carousel-inner .item {
-  opacity: 0;
-  transition-property: opacity;
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    /* display: flex;
+    flex-wrap: wrap; */
+
+    
 }
 
-.carousel-fade .carousel-inner .active {
-  opacity: 1;
+body{
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
+nav{
+    background-color: #F4A460;
+    height: 80px;
+    width: 100%;
 }
 
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
 }
 
-.carousel-fade .carousel-control {
-  z-index: 2;
+nav ul{
+    float: right;
+    margin-right: 20px;
 }
 
-/*
-WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
-now override the 3.3 new styles for modern browsers & apply opacity
-*/
-@media all and (transform-3d), (-webkit-transform-3d) {
-    .carousel-fade .carousel-inner > .item.next,
-    .carousel-fade .carousel-inner > .item.active.right {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: tomato;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
     }
-    .carousel-fade .carousel-inner > .item.prev,
-    .carousel-fade .carousel-inner > .item.active.left {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-inner > .item.next.left,
-    .carousel-fade .carousel-inner > .item.prev.right,
-    .carousel-fade .carousel-inner > .item.active {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
+    nav ul li a{
+        font-size: 16px;
     }
 }
 
-/* just for demo purpose */
-    html,
-    body,
-    .carousel,
-    .carousel-inner,
-    .carousel-inner .item {
-      height: 100%;
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
     }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: peru;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: tomato;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
 
-    .item:nth-child(1) {
-      background: blue;
-    }
+/* body{
+    background: url(./FMLAB.PHOTO/2.png) no-repeat;
+    background-size: cover;
+    position: relative;
+} */
 
-    .item:nth-child(2) {
-      background: red;
-    }
-
-    .item:nth-child(3) {
-      background: orange;
-    }
+body{
+    background-color: #FFF8DC;
+}
